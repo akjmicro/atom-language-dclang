@@ -1,0 +1,90 @@
+'scopeName': 'source.dclang'
+'name': 'Dclang'
+'fileTypes': [ 'dc' ]
+'limitLineLength': false
+
+'patterns': [
+  {
+    'comment': 'line comments for dclang'
+    'name': 'comment.line.dclang'
+    'match': '#.*$'
+  }
+  {
+    'begin': '"'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.dclang'
+    'end': '"'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.dclang'
+    'name': 'string.quoted.double.dclang'
+    'patterns': [
+      {
+        'include': 'punctuation.definition.string.begin.dclang'
+      }
+      {
+        'include': 'punctuation.definition.string.end.dclang'
+      }
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.dclang'
+      }
+    ]
+  }
+  {
+    'match': '(?<=^|\\s)(null|false|true|pi|e)(?=\\s)'
+    'name': 'constant.language.dclang'
+  }
+  {
+    'match': '(?<=^|\\s)(const|var|create|allot|\\,|\\:|\\;)(?=\\s)'
+    'name': 'storage.dclang'
+  }
+  {
+    'match': '(?<=^|\\s)(!|@)(?=\\s)'
+    'name': 'storage.modifier.dclang'
+  }
+  {
+    'comment': 'More keywords'
+    'match': '(?<=^|\\s)(\\+|-|\\*|\\/|\\%|\\<\\<|\\>\\>|\\=|\\<\\>|\\<|\\>|\\<\\=|\\>\\=|isnull|abs|min|max|assert|and|or|not|xor|round|ceil|floor|pow|sqrt|log|log2|log10|sin|cos|tan|rand)(?=\\s)'
+    'name': 'keyword.operator.dclang'
+  }
+  {
+    'comment': 'Stack keywords'
+    'match': '(?<=^|\\s)(clear|drop|dup|over|pick|swap|rot|-rot|nip|tuck|2drop|2dup|2over|2swap|2rot|-2rot|2nip|2tuck|savepush|savepop)(?=\\s)'
+    'name': 'keyword.other.stack.dclang'
+  }
+  {
+    'comment': 'Control keywords'
+    'match': '(?<=^|\\s)(times|again|exittimes|for|next|exitfor|i|j|k|if|else|endif|return)(?=\\s)'
+    'name': 'keyword.control.dclang'
+  }
+  {
+    'match': '(?<=^|\\s)(\\.|h\\.|\\.\\.|\\.s|\\.rj|cr|print|emit|uemit|ord|tohex|bytes32|free|strlen|str=|str<|str>|strfind|strcat|strcpy|strtok|memset|clock|sleep)(?=\\s)'
+    'name': 'keyword.other.unit.dclang'
+  }
+  {
+    'match': '(?<=^|\\s)(fopen|fread|fseek|ftell|fwrite|fflush|fclose|redirect|resetout|flush|open|mkbuf|read)(?=\\s)'
+    'name': 'keyword.other.unit.dclang'
+  }
+  {
+    'match': '(?<=^|\\s)(words|primitives|import|input)(?=\\s)'
+    'name': 'keyword.other.unit.dclang'
+  }
+  {
+    'match': '(?<=^|\\s)-?[0-9]+\\.?[0-9]*(?=\\s)'
+    'name': 'constant.numeric.dclang'
+  }
+  {
+    'match': '(?<=^|\\s)-?0[x|X][0-9a-fA-F]+(?=\\s)'
+    'name': 'constant.numeric.dclang'
+  }
+  {
+    'match': '(?<=^|\\s)[-_A-Z0-9]+(?=\\s)'
+    'name': 'constant.language.dclang'
+  }
+  {
+    'match': '(?<=^|\\s)[-_a-z0-9%!]+(?=\\s)'
+    'name': 'support.function.dclang'
+  }
+]

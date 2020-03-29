@@ -1,0 +1,14 @@
+{
+  "name": "language-dclang",
+  "version": "0.1.0",
+  "description": "A syntax-highlighting grammar package for dclang",
+  "keywords": [
+    "language",
+    "grammar"
+  ],
+  "repository": "https://github.com/akjmicro/atom-language-dclang",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
