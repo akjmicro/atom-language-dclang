@@ -7,6 +7,9 @@
     "grammar"
   ],
   "repository": "https://github.com/akjmicro/atom-language-dclang",
+  "author": {
+    "name": "Aaron Krister Johnson"
+  },
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
