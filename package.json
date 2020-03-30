@@ -1,6 +1,6 @@
 {
   "name": "language-dclang",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "A syntax-highlighting grammar package for dclang",
   "keywords": [
     "language",
